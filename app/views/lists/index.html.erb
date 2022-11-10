@@ -8,17 +8,18 @@
   </div>
 </div>
 
-<h1>My Lists</h1>
+<div class="container">
 
+  <div class="m-5 d-flex justify-content-center align-item-center"><h1>My Lists</h1></div>
 
-
-
-<% @lists.each do |list| %>
-  <%= link_to list_path(list) do %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)"><%= list.name %></div>
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list) do %>
+    <div class="card-category mb-3 list-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.movies.all.first.poster_url %>)"><%= list.name %></div>
+    <% end %>
   <% end %>
-<% end %>
 
-<%= link_to new_list_path do %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">+</div>
-<% end %>
+  <%= link_to new_list_path do %>
+    <div class="card-category mt-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">+</div>
+  <% end %>
+
+</div>
