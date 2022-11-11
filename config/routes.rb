@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   # Defines thec root path route ("/")
   # root "articles#index"
-  resources :lists
+  root to: 'lists#index'
+  resources :lists, except: :index
 
   resources :movies do
     resources :bookmarks
