@@ -1,4 +1,40 @@
-<nav class="navbar bg-light">
-  <%= link_to "", movies_path, class: "fa-solid fa-film" %>
-  <%= link_to "", lists_path, class: "fa-solid fa-popcorn" %>
+<%# <div class="navbar navbar-expand-sm">
+  <div class="container-fluid">
+    <div class="nav-item dropdown"> %>
+      <%#= image_tag "https://e7.pngegg.com/pngimages/158/181/png-clipart-north-american-beaver-graphy-illustration-cute-cartoon-beaver-material-cartoon-character-mammal.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> %>
+        <%#= link_to "Movies", movies_path, class: "dropdown-item" %>
+        <%#= link_to "My Dam", "/", class: "dropdown-item" %>
+        <%#= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+      <%# </div>
+    </div>
+  </div>
+</div> %>
+
+
+
+
+<nav class="navbar bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="<%= '/' %>">Dam it!</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="fa-solid fa-bars"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="<%= '/' %>">My Dams</a>
+          </li>
+          <li class="nav-item">
+           <a class="nav-link" href=<%= movies_path %>>Collect Movie Logs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </nav>

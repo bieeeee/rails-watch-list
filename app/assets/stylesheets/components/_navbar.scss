@@ -1,19 +1,25 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  // display: flex;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-nav li {
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
 
 .banner {
-  background-size: cover;
-  background-position: center;
+  background-color: rgb(7, 7, 7);
+  background-position:top;
   padding: 150px 0;
 }
 
@@ -30,14 +36,4 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 4px 10px;
-  a {
-    font-size: 20px;
-  }
 }
