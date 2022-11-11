@@ -1,3 +1,8 @@
+.bookmark-icon {
+  display: flex;
+  justify-content: right;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

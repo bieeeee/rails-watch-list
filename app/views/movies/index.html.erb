@@ -1,13 +1,14 @@
-<h1>🎬</h1>
+
 
 <div class="container">
+  <div class="mb-5"> </div>
   <div class="cards">
     <% @movies.each do |movie| %>
       <div class="card-trip">
         <%= image_tag movie.poster_url %>
         <div class="card-trip-infos">
           <div>
-            <%= link_to "", new_movie_bookmark_path(movie), class: "fa-sharp fa-solid fa-bookmark" %>
+            <%= link_to "", new_movie_bookmark_path(movie), class: "fa-sharp fa-solid fa-bookmark bookmark-icon" %>
             <h2><%= movie.title %></h2>
             <p><%= movie.overview %></p>
           </div>
@@ -16,6 +17,3 @@
     <% end %>
   </div>
 </div>
-
-
-<i class="fa-sharp fa-solid fa-bookmark"></i>
